@@ -22,15 +22,6 @@ public class UrlWebService {
     @Resource(name = "SOB_P1_DB")
     private DataSource SOB_P1_DB;
 
-    /**
-     * This is a sample web service operation
-     * @param txt
-     * @return 
-     */
-    @WebMethod(operationName = "hello")
-    public String hello(@WebParam(name = "name") String txt) {
-        return "Hello " + txt + " !";
-    }
     
     /**
      * This method cuts an url  
