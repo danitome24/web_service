@@ -7,11 +7,9 @@ package com.service;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import javax.annotation.Resource;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
-import javax.sql.DataSource;
 
 /**
  *
@@ -19,14 +17,13 @@ import javax.sql.DataSource;
  */
 @WebService(serviceName = "UrlWebService")
 public class UrlWebService {
-    @Resource(name = "SOB_P1_DB")
-    private DataSource SOB_P1_DB;
 
     
     /**
      * This method cuts an url  
      * @param url
      * @return urlShort
+     * @throws java.security.NoSuchAlgorithmException
      */
     @WebMethod(operationName = "urlCut")
     public String cutUrl (@WebParam(name = "url") String url) throws NoSuchAlgorithmException {
